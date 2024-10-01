@@ -24,10 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   fectchapi() async {
     await http.get(Uri.parse('https://api.pexels.com/v1/curated?per_page=80'),
-        headers: {
-          'Authorization':
-              'Pjby5WcdXXZnhsMbMZybm2WMyVyvVKVtkDivr21SWllsYgoodPxHHrPL'
-        }).then((value) {
+        headers: {'Authorization': 'Your_Key'}).then((value) {
       Map result = jsonDecode(value.body);
       print(result);
       setState(() {
